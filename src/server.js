@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import emailRoutes from "./routes/email";
+import emailRoutes from "./routes/email.js";
 
 dotenv.config();
 

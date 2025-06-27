@@ -11,6 +11,10 @@ app.use(express.json());
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+app.get("/", (req, res) => {
+  res.send("Server is running ✅");
+});
+
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
