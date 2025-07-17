@@ -47,6 +47,9 @@ app.post("/send-email", async (req, res) => {
     res.status(500).json({ success: false, message: "Something went wrong." });
   }
 });
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🚀 Server started on port ${PORT}`));
